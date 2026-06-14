@@ -1,0 +1,134 @@
+{
+  "fixtures": [
+    {
+      "filename": "valid_old_tom.png",
+      "relative_path": "sample_data/labels/valid_old_tom.png",
+      "sha256": "8f663eb48f3bdc14db7ecf3fe6fe6a5905e66e4f617c779100134f977f5225da",
+      "expected_status": "PASS",
+      "notes": "Baseline compliant label with exact bold warning heading.",
+      "ocr_text": "OLD TOM DISTILLERY\nKentucky Straight Bourbon Whiskey\n45% Alc./Vol. (90 Proof)\n750 mL\nBottled by Old Tom Distillery Co., Louisville, KY\nCountry of Origin: United States\nGOVERNMENT WARNING: (1) ACCORDING TO THE SURGEON GENERAL, WOMEN SHOULD NOT DRINK\nALCOHOLIC BEVERAGES DURING PREGNANCY BECAUSE OF THE RISK OF BIRTH DEFECTS.\n(2) CONSUMPTION OF ALCOHOLIC BEVERAGES IMPAIRS YOUR ABILITY TO DRIVE A CAR\nOR OPERATE MACHINERY, AND MAY CAUSE HEALTH PROBLEMS.",
+      "government_warning_prefix_bold": true,
+      "source": "canonical"
+    },
+    {
+      "filename": "invalid_warning.png",
+      "relative_path": "sample_data/labels/invalid_warning.png",
+      "sha256": "58f17a1287262b56b8d55cff44efd2b167c4280ad65b9671960b2d1bdf12e137",
+      "expected_status": "FAIL",
+      "notes": "Incomplete warning text with noncompliant heading casing.",
+      "ocr_text": "OLD TOM DISTILLERY\nKentucky Straight Bourbon Whiskey\n45% Alc./Vol. (90 Proof)\n750 mL\nBottled by Old Tom Distillery Co., Louisville, KY\nCountry of Origin: United States\nGovernment warning: pregnancy risk. Do not drink and drive.",
+      "government_warning_prefix_bold": false,
+      "source": "canonical"
+    },
+    {
+      "filename": "rotated_blurry.png",
+      "relative_path": "sample_data/labels/rotated_blurry.png",
+      "sha256": "14cb0ad3dbc27bb93d0ab7f3d1f81d93acfbac87276eb251b95ac6b97ed85490",
+      "expected_status": "PASS",
+      "notes": "Compliant fixture photographed with rotation and blur.",
+      "ocr_text": "OLD TOM DISTILLERY\nKentucky Straight Bourbon Whiskey\n45% Alc./Vol. (90 Proof)\n750 mL\nBottled by Old Tom Distillery Co., Louisville, KY\nCountry of Origin: United States\nGOVERNMENT WARNING: (1) ACCORDING TO THE SURGEON GENERAL, WOMEN SHOULD NOT DRINK\nALCOHOLIC BEVERAGES DURING PREGNANCY BECAUSE OF THE RISK OF BIRTH DEFECTS.\n(2) CONSUMPTION OF ALCOHOLIC BEVERAGES IMPAIRS YOUR ABILITY TO DRIVE A CAR\nOR OPERATE MACHINERY, AND MAY CAUSE HEALTH PROBLEMS.",
+      "government_warning_prefix_bold": true,
+      "source": "canonical"
+    },
+    {
+      "filename": "sample_01_valid_clean.png",
+      "relative_path": "sample_data/generated_labels/sample_01_valid_clean.png",
+      "sha256": "8f663eb48f3bdc14db7ecf3fe6fe6a5905e66e4f617c779100134f977f5225da",
+      "expected_status": "PASS",
+      "notes": "Compliant clean artwork.",
+      "ocr_text": "OLD TOM DISTILLERY\nKentucky Straight Bourbon Whiskey\n45% Alc./Vol. (90 Proof)\n750 mL\nBottled by Old Tom Distillery Co., Louisville, KY\nCountry of Origin: United States\nGOVERNMENT WARNING: (1) ACCORDING TO THE SURGEON GENERAL, WOMEN SHOULD NOT DRINK\nALCOHOLIC BEVERAGES DURING PREGNANCY BECAUSE OF THE RISK OF BIRTH DEFECTS.\n(2) CONSUMPTION OF ALCOHOLIC BEVERAGES IMPAIRS YOUR ABILITY TO DRIVE A CAR\nOR OPERATE MACHINERY, AND MAY CAUSE HEALTH PROBLEMS.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_02_valid_rotated.png",
+      "relative_path": "sample_data/generated_labels/sample_02_valid_rotated.png",
+      "sha256": "f5db50d467738f633ccfd170aef4e151e6a497a6eb6f4f63afdaa1b2222e2ec3",
+      "expected_status": "PASS",
+      "notes": "Compliant rotated artwork.",
+      "ocr_text": "OLD TOM DISTILLERY\nKentucky Straight Bourbon Whiskey\n45% Alc./Vol. (90 Proof)\n750 mL\nBottled by Old Tom Distillery Co., Louisville, KY\nCountry of Origin: United States\nGOVERNMENT WARNING: (1) ACCORDING TO THE SURGEON GENERAL, WOMEN SHOULD NOT DRINK\nALCOHOLIC BEVERAGES DURING PREGNANCY BECAUSE OF THE RISK OF BIRTH DEFECTS.\n(2) CONSUMPTION OF ALCOHOLIC BEVERAGES IMPAIRS YOUR ABILITY TO DRIVE A CAR\nOR OPERATE MACHINERY, AND MAY CAUSE HEALTH PROBLEMS.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_03_valid_soft_blur.png",
+      "relative_path": "sample_data/generated_labels/sample_03_valid_soft_blur.png",
+      "sha256": "408f119f64b09622c3e9927a32f942f8c29c1bd872cca2355fa0077beb6e8c59",
+      "expected_status": "PASS",
+      "notes": "Compliant softly blurred artwork.",
+      "ocr_text": "OLD TOM DISTILLERY\nKentucky Straight Bourbon Whiskey\n45% Alc./Vol. (90 Proof)\n750 mL\nBottled by Old Tom Distillery Co., Louisville, KY\nCountry of Origin: United States\nGOVERNMENT WARNING: (1) ACCORDING TO THE SURGEON GENERAL, WOMEN SHOULD NOT DRINK\nALCOHOLIC BEVERAGES DURING PREGNANCY BECAUSE OF THE RISK OF BIRTH DEFECTS.\n(2) CONSUMPTION OF ALCOHOLIC BEVERAGES IMPAIRS YOUR ABILITY TO DRIVE A CAR\nOR OPERATE MACHINERY, AND MAY CAUSE HEALTH PROBLEMS.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_04_valid_glare.png",
+      "relative_path": "sample_data/generated_labels/sample_04_valid_glare.png",
+      "sha256": "5bdfae8308d7e7fbfd4853e7b5a984e1c0082c9bd532e046486ec2763d0c44c8",
+      "expected_status": "PASS",
+      "notes": "Compliant artwork with simulated glare.",
+      "ocr_text": "OLD TOM DISTILLERY\nKentucky Straight Bourbon Whiskey\n45% Alc./Vol. (90 Proof)\n750 mL\nBottled by Old Tom Distillery Co., Louisville, KY\nCountry of Origin: United States\nGOVERNMENT WARNING: (1) ACCORDING TO THE SURGEON GENERAL, WOMEN SHOULD NOT DRINK\nALCOHOLIC BEVERAGES DURING PREGNANCY BECAUSE OF THE RISK OF BIRTH DEFECTS.\n(2) CONSUMPTION OF ALCOHOLIC BEVERAGES IMPAIRS YOUR ABILITY TO DRIVE A CAR\nOR OPERATE MACHINERY, AND MAY CAUSE HEALTH PROBLEMS.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_05_valid_angle_glare.png",
+      "relative_path": "sample_data/generated_labels/sample_05_valid_angle_glare.png",
+      "sha256": "618f1575aac51923af7caeb04edf5764d4d6087a2b27a29b439609baa2064f54",
+      "expected_status": "PASS",
+      "notes": "Compliant artwork with rotation and glare.",
+      "ocr_text": "OLD TOM DISTILLERY\nKentucky Straight Bourbon Whiskey\n45% Alc./Vol. (90 Proof)\n750 mL\nBottled by Old Tom Distillery Co., Louisville, KY\nCountry of Origin: United States\nGOVERNMENT WARNING: (1) ACCORDING TO THE SURGEON GENERAL, WOMEN SHOULD NOT DRINK\nALCOHOLIC BEVERAGES DURING PREGNANCY BECAUSE OF THE RISK OF BIRTH DEFECTS.\n(2) CONSUMPTION OF ALCOHOLIC BEVERAGES IMPAIRS YOUR ABILITY TO DRIVE A CAR\nOR OPERATE MACHINERY, AND MAY CAUSE HEALTH PROBLEMS.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_06_fail_warning_case.png",
+      "relative_path": "sample_data/generated_labels/sample_06_fail_warning_case.png",
+      "sha256": "b9d5d7c1ecb3702ae5ce30c411bf02238692fc18ad994152512069102356c66e",
+      "expected_status": "FAIL",
+      "notes": "Exact warning wording with noncompliant title-case heading.",
+      "ocr_text": "OLD TOM DISTILLERY\nKentucky Straight Bourbon Whiskey\n45% Alc./Vol. (90 Proof)\n750 mL\nBottled by Old Tom Distillery Co., Louisville, KY\nCountry of Origin: United States\nGovernment Warning: (1) ACCORDING TO THE SURGEON GENERAL, WOMEN SHOULD NOT DRINK\nALCOHOLIC BEVERAGES DURING PREGNANCY BECAUSE OF THE RISK OF BIRTH DEFECTS.\n(2) CONSUMPTION OF ALCOHOLIC BEVERAGES IMPAIRS YOUR ABILITY TO DRIVE A CAR\nOR OPERATE MACHINERY, AND MAY CAUSE HEALTH PROBLEMS.",
+      "government_warning_prefix_bold": false,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_07_fail_warning_missing.png",
+      "relative_path": "sample_data/generated_labels/sample_07_fail_warning_missing.png",
+      "sha256": "fa9c116edd6ab2a0bfd151bfdb58b49f00f212a5f49319ed13c0a6991e318cfd",
+      "expected_status": "FAIL",
+      "notes": "Mandatory government warning omitted.",
+      "ocr_text": "OLD TOM DISTILLERY\nKentucky Straight Bourbon Whiskey\n45% Alc./Vol. (90 Proof)\n750 mL\nBottled by Old Tom Distillery Co., Louisville, KY\nCountry of Origin: United States",
+      "government_warning_prefix_bold": null,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_08_fail_abv.png",
+      "relative_path": "sample_data/generated_labels/sample_08_fail_abv.png",
+      "sha256": "4297b5bcdfc5f489d792af1259a164734393ec3583082a152896d9347f5e3f6f",
+      "expected_status": "FAIL",
+      "notes": "Alcohol content differs from the expected application.",
+      "ocr_text": "OLD TOM DISTILLERY\nKentucky Straight Bourbon Whiskey\n40% Alc./Vol. (80 Proof)\n750 mL\nBottled by Old Tom Distillery Co., Louisville, KY\nCountry of Origin: United States\nGOVERNMENT WARNING: (1) ACCORDING TO THE SURGEON GENERAL, WOMEN SHOULD NOT DRINK\nALCOHOLIC BEVERAGES DURING PREGNANCY BECAUSE OF THE RISK OF BIRTH DEFECTS.\n(2) CONSUMPTION OF ALCOHOLIC BEVERAGES IMPAIRS YOUR ABILITY TO DRIVE A CAR\nOR OPERATE MACHINERY, AND MAY CAUSE HEALTH PROBLEMS.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_09_fail_net_contents.png",
+      "relative_path": "sample_data/generated_labels/sample_09_fail_net_contents.png",
+      "sha256": "6a16a951b6e172acbbf1f5c9136e1b48fdc64ee914ba6ef5b10548ca15c594e9",
+      "expected_status": "WARNING",
+      "notes": "Net contents differ from the expected application.",
+      "ocr_text": "OLD TOM DISTILLERY\nKentucky Straight Bourbon Whiskey\n45% Alc./Vol. (90 Proof)\n700 mL\nBottled by Old Tom Distillery Co., Louisville, KY\nCountry of Origin: United States\nGOVERNMENT WARNING: (1) ACCORDING TO THE SURGEON GENERAL, WOMEN SHOULD NOT DRINK\nALCOHOLIC BEVERAGES DURING PREGNANCY BECAUSE OF THE RISK OF BIRTH DEFECTS.\n(2) CONSUMPTION OF ALCOHOLIC BEVERAGES IMPAIRS YOUR ABILITY TO DRIVE A CAR\nOR OPERATE MACHINERY, AND MAY CAUSE HEALTH PROBLEMS.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_10_fail_brand.png",
+      "relative_path": "sample_data/generated_labels/sample_10_fail_brand.png",
+      "sha256": "5deca834259193181dfc35b7b32e70e2ef1766b036f658330aaca552c6e43280",
+      "expected_status": "FAIL",
+      "notes": "Brand name differs from the expected application.",
+      "ocr_text": "RIVER BEND DISTILLING\nKentucky Straight Bourbon Whiskey\n45% Alc./Vol. (90 Proof)\n750 mL\nBottled by Old Tom Distillery Co., Louisville, KY\nCountry of Origin: United States\nGOVERNMENT WARNING: (1) ACCORDING TO THE SURGEON GENERAL, WOMEN SHOULD NOT DRINK\nALCOHOLIC BEVERAGES DURING PREGNANCY BECAUSE OF THE RISK OF BIRTH DEFECTS.\n(2) CONSUMPTION OF ALCOHOLIC BEVERAGES IMPAIRS YOUR ABILITY TO DRIVE A CAR\nOR OPERATE MACHINERY, AND MAY CAUSE HEALTH PROBLEMS.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    }
+  ]
+}

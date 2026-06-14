@@ -1,0 +1,14 @@
+{
+  "valid_old_tom.png": {
+    "expected_status": "PASS",
+    "notes": "Controlled fixture: baseline label with expected application data, exact government warning text, and a bold uppercase warning heading."
+  },
+  "invalid_warning.png": {
+    "expected_status": "FAIL",
+    "notes": "Controlled fixture: government warning uses incorrect casing and incomplete wording."
+  },
+  "rotated_blurry.png": {
+    "expected_status": "PASS",
+    "notes": "Controlled fixture with a bold uppercase warning heading; demonstrates the preprocessing scenario after rotation and blur."
+  }
+}

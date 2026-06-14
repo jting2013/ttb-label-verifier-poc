@@ -1,0 +1,86 @@
+{
+  "count": 10,
+  "output_directory": "sample_data/generated_labels",
+  "samples": [
+    {
+      "filename": "sample_01_valid_clean.png",
+      "relative_path": "sample_data/generated_labels/sample_01_valid_clean.png",
+      "expected_status": "PASS",
+      "notes": "Compliant clean artwork.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_02_valid_rotated.png",
+      "relative_path": "sample_data/generated_labels/sample_02_valid_rotated.png",
+      "expected_status": "PASS",
+      "notes": "Compliant rotated artwork.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_03_valid_soft_blur.png",
+      "relative_path": "sample_data/generated_labels/sample_03_valid_soft_blur.png",
+      "expected_status": "PASS",
+      "notes": "Compliant softly blurred artwork.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_04_valid_glare.png",
+      "relative_path": "sample_data/generated_labels/sample_04_valid_glare.png",
+      "expected_status": "PASS",
+      "notes": "Compliant artwork with simulated glare.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_05_valid_angle_glare.png",
+      "relative_path": "sample_data/generated_labels/sample_05_valid_angle_glare.png",
+      "expected_status": "PASS",
+      "notes": "Compliant artwork with rotation and glare.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_06_fail_warning_case.png",
+      "relative_path": "sample_data/generated_labels/sample_06_fail_warning_case.png",
+      "expected_status": "FAIL",
+      "notes": "Exact warning wording with noncompliant title-case heading.",
+      "government_warning_prefix_bold": false,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_07_fail_warning_missing.png",
+      "relative_path": "sample_data/generated_labels/sample_07_fail_warning_missing.png",
+      "expected_status": "FAIL",
+      "notes": "Mandatory government warning omitted.",
+      "government_warning_prefix_bold": null,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_08_fail_abv.png",
+      "relative_path": "sample_data/generated_labels/sample_08_fail_abv.png",
+      "expected_status": "FAIL",
+      "notes": "Alcohol content differs from the expected application.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_09_fail_net_contents.png",
+      "relative_path": "sample_data/generated_labels/sample_09_fail_net_contents.png",
+      "expected_status": "WARNING",
+      "notes": "Net contents differ from the expected application.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    },
+    {
+      "filename": "sample_10_fail_brand.png",
+      "relative_path": "sample_data/generated_labels/sample_10_fail_brand.png",
+      "expected_status": "FAIL",
+      "notes": "Brand name differs from the expected application.",
+      "government_warning_prefix_bold": true,
+      "source": "generated"
+    }
+  ]
+}
