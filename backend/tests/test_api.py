@@ -5,6 +5,8 @@ from fastapi.testclient import TestClient
 
 os.environ["OCR_ENGINE"] = "demo"
 
+TEST_DATA_DIR = Path(__file__).resolve().parents[2] / "sample_data"
+
 from app.main import app
 
 
@@ -18,7 +20,7 @@ def test_health() -> None:
 
 
 def test_upload_demo_label() -> None:
-    sample = Path("../sample_data/labels/valid_old_tom.png")
+    sample = TEST_DATA_DIR / "labels" / "valid_old_tom.png"
     response = client.post(
         "/api/labels/upload",
         data={"application_id": "APP-OLD-TOM-001"},
@@ -32,7 +34,7 @@ def test_upload_demo_label() -> None:
 
 
 def test_upload_invalid_warning_label_fails() -> None:
-    sample = Path("../sample_data/labels/invalid_warning.png")
+    sample = TEST_DATA_DIR / "labels" / "invalid_warning.png"
     response = client.post(
         "/api/labels/upload",
         data={"application_id": "APP-OLD-TOM-001"},
@@ -46,9 +48,9 @@ def test_upload_invalid_warning_label_fails() -> None:
 
 def test_bundled_sample_batch_produces_documented_summary() -> None:
     samples = [
-        Path("../sample_data/labels/valid_old_tom.png"),
-        Path("../sample_data/labels/invalid_warning.png"),
-        Path("../sample_data/labels/rotated_blurry.png"),
+        TEST_DATA_DIR / "labels" / "valid_old_tom.png",
+        TEST_DATA_DIR / "labels" / "invalid_warning.png",
+        TEST_DATA_DIR / "labels" / "rotated_blurry.png",
     ]
     response = client.post(
         "/api/labels/upload",
@@ -71,7 +73,7 @@ def test_run_sample_batch_endpoint_produces_documented_summary() -> None:
 
 
 def test_generated_ten_file_batch_produces_documented_summary() -> None:
-    samples = sorted(Path("../sample_data/generated_labels").glob("*.png"))
+    samples = sorted((TEST_DATA_DIR / "generated_labels").glob("*.png"))
     assert len(samples) == 10
     response = client.post(
         "/api/labels/upload",
@@ -88,7 +90,7 @@ def test_generated_ten_file_batch_produces_documented_summary() -> None:
 
 
 def test_demo_mode_does_not_substitute_valid_text_for_unknown_upload() -> None:
-    sample = Path("../sample_data/labels/valid_old_tom.png")
+    sample = TEST_DATA_DIR / "labels" / "valid_old_tom.png"
     response = client.post(
         "/api/labels/upload",
         data={"application_id": "APP-OLD-TOM-001"},
